@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3d1a25-6e70-4807-b98d-2048e3efcd3c" name="Changes" comment="" />
+    <list default="true" id="ff3d1a25-6e70-4807-b98d-2048e3efcd3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/fastapi_app/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fastapi_app/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/databse_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/databse_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/db_script.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/db_script.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/neo4j_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/neo4j_db_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/desktop/desktop_ui_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/desktop/desktop_ui_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exceptions/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/exceptions/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exceptions/db_exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/exceptions/db_exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipe_book/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/recipe_book/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipe_book/recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/recipe_book/recipe.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +35,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -24,9 +45,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/.cache/pypoetry/virtualenvs/course-work-hG6EAcZ1-py3.10/lib/python3.10/site-packages/neo4j/_sync/work/session.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -39,16 +57,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Intro_to_neural_networks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fastapi_app" />
       <recent name="$PROJECT_DIR$/UI/desktop" />
       <recent name="$PROJECT_DIR$/UI" />
       <recent name="$PROJECT_DIR$" />
@@ -99,6 +119,7 @@
       <workItem from="1671014040058" duration="1031000" />
       <workItem from="1671179545043" duration="57000" />
       <workItem from="1671435205597" duration="11032000" />
+      <workItem from="1679738142947" duration="3478000" />
     </task>
     <servers />
   </component>

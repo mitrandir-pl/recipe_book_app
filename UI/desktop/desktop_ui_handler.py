@@ -2,7 +2,7 @@ import tkinter as tk
 
 from dataclasses import dataclass
 
-from DB import DatabaseHandler
+from fastapi_app.DB import DatabaseHandler
 from UI import UIHandler
 from UI.desktop.MainWindow import Windows
 

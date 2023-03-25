@@ -1,6 +1,17 @@
 version: '3'
 
 services:
+
+  fastapi:
+    build: ./fastapi_app
+    volumes:
+      - ./fastapi_app:/fastapi_app
+    entrypoint: ./entrypoint.sh
+    ports:
+      - "8000:8000"
+    depends_on:
+      - neo4j
+
   neo4j:
     restart: always
     image: neo4j:4.2.3
@@ -12,8 +23,3 @@ services:
       - ./course_work_5_sem:/course_work_5_sem
     environment:
       - NEO4J_AUTH=neo4j/cooking
-
-#  desktop_app:
-#    container_name: desktop_app
-#    command:
-#      -

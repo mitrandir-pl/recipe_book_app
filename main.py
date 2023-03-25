@@ -2,8 +2,8 @@ import os
 
 from dotenv import load_dotenv
 
-from UI import DesktopUIHandler, UIHandler
-from DB import DatabaseHandler, Neo4jDatabaseHandler
+from UI import UIHandler
+from fastapi_app.DB import DatabaseHandler, Neo4jDatabaseHandler
 
 
 def connect_to_database(database_handler: DatabaseHandler,
