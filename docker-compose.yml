@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  neo4j:
+    restart: always
+    image: neo4j:4.2.3
+    container_name: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./course_work_5_sem:/course_work_5_sem
+    environment:
+      - NEO4J_AUTH=neo4j/cooking
+
+#  desktop_app:
+#    container_name: desktop_app
+#    command:
+#      -
