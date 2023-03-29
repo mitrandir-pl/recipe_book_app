@@ -2,9 +2,9 @@ from dataclasses import dataclass
 
 from neo4j import GraphDatabase, Driver
 
-from fastapi_app.DB.databse_handler import DatabaseHandler
-from fastapi_app.recipe_book import Recipe, Product
-from fastapi_app.exceptions import (
+from .databse_handler import DatabaseHandler
+from recipe_book import Recipe, Product
+from exceptions import (
     RecipeDoesNotExistException,
     NoIngredientsEnteredException,
     NoIngredientsException,

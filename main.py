@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 
-from UI import UIHandler
+# from UI import UIHandler
 from fastapi_app.DB import DatabaseHandler, Neo4jDatabaseHandler
 
 
@@ -11,8 +11,8 @@ def connect_to_database(database_handler: DatabaseHandler,
     database_handler.connect(uri, username, password)
 
 
-def start_ui(ui_handler: UIHandler) -> None:
-    ui_handler.run()
+# def start_ui(ui_handler: UIHandler) -> None:
+#     ui_handler.run()
 
 
 def main():

@@ -1,1 +1,1 @@
-from fastapi_app.recipe_book.recipe import Recipe, Product
+from recipe_book.recipe import Recipe, Product

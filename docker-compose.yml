@@ -3,19 +3,43 @@ version: '3'
 services:
 
   fastapi:
+    container_name: fastapi
     build: ./fastapi_app
     volumes:
       - ./fastapi_app:/fastapi_app
-    entrypoint: ./entrypoint.sh
+#    entrypoint: ./entrypoint.sh
     ports:
       - "8000:8000"
+    stdin_open: true
+    tty: true
+    command: poetry run uvicorn main:app --reload --host 0.0.0.0
     depends_on:
       - neo4j
+
+  ui:
+    container_name: web_ui
+    build: ./UI/web_ui
+    volumes:
+      - ./UI/web_ui/src:/ui/web/src
+      - ./UI/web_ui/public:/UI/web_ui/public
+      - ./UI/web_ui/package.json:/UI/web_ui/package.json
+      - ./UI/web_ui/package-lock.json:/UI/web_ui/package-lock.json
+    ports:
+      - "3000:3000"
+    environment:
+      DEBUG: 'true'
+    command: npm start
+    depends_on:
+      - fastapi
 
   neo4j:
     restart: always
     image: neo4j:4.2.3
     container_name: neo4j
+    networks:
+      default:
+        aliases:
+         - neo4j
     ports:
       - "7474:7474"
       - "7687:7687"
