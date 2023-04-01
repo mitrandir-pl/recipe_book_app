@@ -3,9 +3,11 @@ import os
 from fastapi import FastAPI
 from dotenv import load_dotenv
 
-from DB import DatabaseHandler, Neo4jDatabaseHandler
+from DB import DatabaseHandler, Neo4jDatabaseHandler, Neo4jSession
+from routes import recipes_urls
 
 app = FastAPI()
+app.include_router(recipes_urls.router)
 
 
 def connect_to_database(database_handler: DatabaseHandler,
@@ -47,8 +49,12 @@ load_dotenv()
 
 @app.get("/")
 def read_root():
-    print(len(main()))
-    for i in main():
-        print(i)
-    breakpoint()
-    return {"Hello": main()}
+    with Neo4jSession() as session:
+        session.get_recipes_by_country_category_and_time(
+        'Italy', 'Second course', 65
+    )
+    # print(len(main()))
+    # for i in main():
+    #     print(i)
+    # breakpoint()
+    return {"Hello": ""}

@@ -4,9 +4,9 @@ from abc import ABC, abstractmethod
 class DatabaseHandler(ABC):
 
     @abstractmethod
-    def connect(self, uri: str, user: str, password: str) -> None:
+    def __enter__(self) -> None:
         pass
 
     @abstractmethod
-    def close(self):
+    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
         pass

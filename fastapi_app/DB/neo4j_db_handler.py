@@ -1,8 +1,8 @@
 from dataclasses import dataclass
+import os
 
 from neo4j import GraphDatabase, Driver
 
-from .databse_handler import DatabaseHandler
 from recipe_book import Recipe, Product
 from exceptions import (
     RecipeDoesNotExistException,
@@ -11,23 +11,10 @@ from exceptions import (
 )
 
 
-@dataclass
-class Neo4jDatabaseHandler(DatabaseHandler):
-    driver: Driver = None
+class Neo4jDatabaseHandler:
 
-    def connect(self, uri: str, user: str, password: str) -> None:
-        """Establishes a connection with the database.
-
-        :param uri: url address of the database
-        :param user: user's name
-        :param password: user's password
-        :return: None
-        """
-        self.driver = GraphDatabase.driver(uri, auth=(user, password))
-
-    def close(self) -> None:
-        """Closes connection with database."""
-        self.driver.close()
+    def __init__(self, driver: Driver):
+        self.driver = driver
 
     def get_recipes_from_data(self, data: dict) -> list[Recipe]:
         """Gets data from database and returns list of recipes from it."""
@@ -220,3 +207,24 @@ class Neo4jDatabaseHandler(DatabaseHandler):
 
     def count_calories_in_recipe(self):
         pass
+
+
+@dataclass
+class Neo4jSession:
+    driver: Driver = None
+
+    def __enter__(self) -> Neo4jDatabaseHandler:
+        """Establishes a connection with the database.
+
+        :return: None
+        """
+        self.driver = GraphDatabase.driver(
+            os.getenv("NEO4J_URI"),
+            auth=(os.getenv("NEO4J_USERNAME"),
+                  os.getenv("NEO4J_PASSWORD"))
+        )
+        return Neo4jDatabaseHandler(self.driver)
+
+    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+        """Closes connection with database."""
+        self.driver.close()

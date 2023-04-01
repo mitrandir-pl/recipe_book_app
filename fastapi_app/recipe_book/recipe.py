@@ -1,5 +1,4 @@
 class Product:
-    __slots__ = ['name', 'kcal']
 
     def __init__(self, name: str, kcal: int) -> None:
         self.name = name
@@ -7,7 +6,6 @@ class Product:
 
 
 class Recipe:
-    __slots__ = ['name', 'how_to_cook', 'ingredients']
 
     def __init__(self, name: str, how_to_cook: str,
                  ingredients: list[Product] = None) -> None:
