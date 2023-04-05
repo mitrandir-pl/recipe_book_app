@@ -8,7 +8,7 @@ router = APIRouter()
 
 
 class RecipeName(BaseModel):
-    name: str = None
+    name: str
 
 
 @router.get("/recipes_name")
