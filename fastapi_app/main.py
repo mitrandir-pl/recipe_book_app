@@ -1,6 +1,7 @@
 import os
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
 from DB import DatabaseHandler, Neo4jDatabaseHandler, Neo4jSession
@@ -9,6 +10,18 @@ from routes import recipes_urls
 app = FastAPI()
 app.include_router(recipes_urls.router)
 
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def connect_to_database(database_handler: DatabaseHandler,
                         uri: str, username: str, password: str) -> None:
@@ -57,4 +70,4 @@ def read_root():
     # for i in main():
     #     print(i)
     # breakpoint()
-    return {"Hello": ""}
+    return {"id": 1}

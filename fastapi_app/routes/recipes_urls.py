@@ -11,9 +11,27 @@ class RecipeName(BaseModel):
     name: str
 
 
-@router.get("/recipes_name")
+class RecipeCountry(BaseModel):
+    country: str
+
+
+@router.post("/recipes_name")
 async def get_recipes_by_name(recipe: RecipeName,
                               session: Neo4jSession = Depends(get_session)):
     """Returns a recipe by name"""
     recipes = session.get_recipe_by_name(recipe.name)
+    return recipes
+
+
+@router.get("/recipes_country")
+async def get_recipes_by_name(recipe: RecipeCountry,
+                              session: Neo4jSession = Depends(get_session)):
+    """Returns a recipe by name"""
+    recipes = session.get_recipe_by_name(recipe.country)
+    return recipes
+
+@router.get("/recipes")
+async def get_recipes(session: Neo4jSession = Depends(get_session)):
+    """Returns all recipes from database"""
+    recipes = session.get_recipes()
     return recipes

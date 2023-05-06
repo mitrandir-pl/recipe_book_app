@@ -23,14 +23,28 @@ class Neo4jDatabaseHandler:
             for i in data:
                 recipe_name = i['recipe']['name']
                 recipe_how_to_cook = i['recipe']['how_to_cook']
+                recipe_time = i['recipe']['cooking_time_in_min']
                 ingredients = self.get_ingredients_for_recipe(
                     recipe_name
                 )
                 list_of_recipes.append(
-                    Recipe(recipe_name, recipe_how_to_cook, ingredients)
+                    Recipe(recipe_name, recipe_how_to_cook, recipe_time, ingredients)
                 )
         else:
             raise RecipeDoesNotExistException()
+        return list_of_recipes
+
+    def get_recipes(self) -> list[Recipe]:
+        """Returns a lisr with all recipes."""
+        with self.driver.session() as session:
+            recipe = session.execute_write(self._get_recipes)
+        return recipe
+
+    def _get_recipes(self, tx) -> list[Recipe]:
+        """Finds and returns all recipes."""
+        query = "MATCH (recipe:Recipe) RETURN recipe"
+        data = tx.run(query).data()
+        list_of_recipes = self.get_recipes_from_data(data)
         return list_of_recipes
 
     def get_recipe_by_name(self, recipe_name: str) -> Recipe:
@@ -53,8 +67,9 @@ class Neo4jDatabaseHandler:
         if data:
             recipe_name = data[0]['name']
             recipe_how_to_cook = data[0]['how_to_cook']
+            recipe_time = data[0]['cooking_time_in_min']
             ingredients = self.get_ingredients_for_recipe(recipe_name)
-            recipe = Recipe(recipe_name, recipe_how_to_cook, ingredients)
+            recipe = Recipe(recipe_name, recipe_how_to_cook, recipe_time, ingredients)
         else:
             raise RecipeDoesNotExistException()
         return recipe

@@ -20,10 +20,7 @@ services:
     container_name: web_ui
     build: ./UI/web_ui
     volumes:
-      - ./UI/web_ui/src:/ui/web/src
-      - ./UI/web_ui/public:/UI/web_ui/public
-      - ./UI/web_ui/package.json:/UI/web_ui/package.json
-      - ./UI/web_ui/package-lock.json:/UI/web_ui/package-lock.json
+      - ./UI/web_ui:/UI/web_ui
     ports:
       - "3000:3000"
     environment:

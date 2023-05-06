@@ -1,0 +1,56 @@
+body {
+    background-image: url('./photo_2023-03-03_12-50-57.jpg');
+    /* background-size: 1500px 800px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+h2 {
+    font-size: 22px;
+    margin-left: 20px;
+}
+img {
+    float: right;
+    margin-left: 10px;
+    margin-right: 300px;
+    max-width: 30%;
+    max-height: 30%;
+}
+ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+li {
+    margin-bottom: 5px;
+}
+.steps {
+    margin-top: 20px;
+}
+.step {
+    margin-bottom: 10px;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    /* background-color: #f8f8f8; */
+}
+.step:before {
+    content: counter(step);
+    counter-increment: step;
+    display: inline-block;
+    background-color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    color: #fff;
+}

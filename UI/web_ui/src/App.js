@@ -1,16 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import AppRouter from './components/AppRouter';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit alkfnlwenaf reload.
-        </p>
-      </header>
-    </div>
-  );
+
+    return (
+        <AppRouter />
+    );
 }
 
 export default App;
