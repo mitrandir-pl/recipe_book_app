@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, UploadFile, File, Form
 from pydantic import BaseModel
 
 from config.db_settings import get_session
@@ -9,6 +9,14 @@ router = APIRouter()
 
 class RecipeName(BaseModel):
     name: str
+
+
+class Recipe(BaseModel):
+    recipe_name: str
+    ingredients: dict
+    category: str
+    cooking_time: int
+    recipe: str
 
 
 class RecipeCountry(BaseModel):
@@ -29,6 +37,13 @@ async def get_recipes_by_name(recipe: RecipeCountry,
     """Returns a recipe by name"""
     recipes = session.get_recipe_by_name(recipe.country)
     return recipes
+
+
+@router.post("/recipes_add")
+async def post_new_recipe(recipe: Recipe,
+                          session: Neo4jSession = Depends(get_session)):
+    session.add_recipe(recipe)
+
 
 @router.get("/recipes")
 async def get_recipes(session: Neo4jSession = Depends(get_session)):

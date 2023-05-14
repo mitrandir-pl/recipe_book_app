@@ -203,7 +203,7 @@ class Neo4jDatabaseHandler:
             recipe = session.execute_write(self._get_ingredients_for_recipe, recipe_name)
         return recipe
 
-    def _get_ingredients_for_recipe(self, tx, recipe_name: str) -> list[Product]:
+    def _get_ingredients_for_recipe(self, tx, recipe_name: str) -> list[Product] | None:
         """Finds and returns ingredients needed for a recipe."""
         query = "MATCH (:Recipe {name: $recipe_name})-[:INGREDIENT]->" \
                 "(ingredients:Product) RETURN ingredients"
@@ -217,11 +217,34 @@ class Neo4jDatabaseHandler:
                 )
                 ingredients.append(ingredient)
         else:
-            raise NoIngredientsException()
+            return None
+            # raise NoIngredientsException()
         return ingredients
 
     def count_calories_in_recipe(self):
         pass
+
+    def add_recipe(self, recipe) -> list[Recipe]:
+        with self.driver.session() as session:
+            recipe = session.execute_write(
+                self._add_recipe, recipe
+            )
+        return recipe
+
+    def _add_recipe(self, tx, recipe):
+        """Finds and returns list of recipes by country, category and time."""
+        query = f"""CREATE ({recipe.recipe_name}:Recipe {{name: $name, cooking_time_in_min: 45, how_to_cook: $how_to_cook}})"""
+        data = tx.run(query, name=recipe.recipe_name,
+                      cooking_time_in_min=recipe.cooking_time,
+                      how_to_cook=recipe.recipe)
+        for key, value in recipe.ingredients.items():
+            query = f"CREATE ({recipe.recipe_name})-[:INGREDIENT {{required_amount_in_grams: {value}}}]->({key})"
+            data = tx.run(query)
+        breakpoint()
+        # data = tx.run(query, country_name=country_name,
+        #               category_name=category_name, cooking_time_in_min=cooking_time_in_min).data()
+        # list_of_recipes = self.get_recipes_from_data(data)
+        # return list_of_recipes
 
 
 @dataclass

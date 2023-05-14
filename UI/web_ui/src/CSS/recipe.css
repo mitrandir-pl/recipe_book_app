@@ -54,3 +54,12 @@ li {
     margin-right: 10px;
     color: #fff;
 }
+
+.back-button {
+border: 1px solid #ccc;
+background: linear-gradient(to top, #bdbcbc, #8f8c8c);
+height: 60px;
+width: 140px;
+margin-top: 10px;
+margin-left: 10px;
+}

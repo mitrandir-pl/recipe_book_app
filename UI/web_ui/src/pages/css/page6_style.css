@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.main{
+    background: url(../../CSS/images/bg.jpg);
+    max-width: 1920px;
+    height: 1080px;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.page6_content_wrap{
+    padding-top: 27px;
+    max-width: 1804px;
+    margin: 0 auto;
+}
+
+.red_text{
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 51px;
+    mix-blend-mode: hard-light;
+    text-align: center;
+}
+
+.page6_content{
+    max-width: 1218px;
+    
+}
+
+.back_button_wrap{
+    height: 72px;
+}
+
+.back_button{
+    background: linear-gradient(90.09deg, rgba(129, 122, 122, 0.46) 5.92%, rgba(0, 0, 0, 0) 112.56%);
+    width: 200px;
+    height: 72px;   
+    color: rgba(255, 255, 255, 0.42);
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 51px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content_middle{
+    width: 616px;
+    height: 47px;
+    background: #D9D9D9;
+    margin: 0 auto;
+}
+
+.content_middle_text{
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 51px;
+    text-align: center;
+    color: #000000;
+
+}
+
+.content_bottom{
+    
+    width: 1218px;
+    height: 386px;
+    background: linear-gradient(90deg, rgba(165, 27, 27, 0.67) 0%, rgba(56, 37, 37, 0.61) 49.62%, rgba(90, 38, 38, 0.837874) 99.98%, rgba(90, 38, 38, 0.625) 99.99%, #FFFFFF 100%);
+    border-radius: 10px;
+    margin-top: 19px;
+}
+
+.content_bottom_form{
+    display: flex;
+
+}
+
+.left_inputs{
+    padding: 29px 0 0 35px;
+    width: 416px;
+}
+
+.right_inputs{
+    padding: 29px 0 0 129px;
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    background-color: #f7f7f7;
+    width: 416px;
+    height: 65px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.19);
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 51px;
+}
+.input_no_2{
+    margin-top: 48px;
+}
+
+.input_no_3{
+    margin-top: 48px;
+}
+
+.submit_form{
+    width: 241px;
+    height: 82px;
+    background: linear-gradient(270deg, #1B1313 -22.61%, #5A4141 10.45%, rgba(123, 53, 53, 0.67) 49.79%);
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+/* ___________________________page5____________________________ */
+
+#button_status{
+    color: #441A1A;
+}
+
+.recipe{
+    width: 1055px;
+    height: 334px;
+    background: linear-gradient(180deg, rgba(155, 134, 134, 0.38) 0%, rgba(96, 65, 65, 0) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.article_wrap{
+    display: flex;
+    padding: 25px 30px 26px 30px;
+
+}
+
+.recipe_img{
+    width: 332px;
+    height: 283px;
+    background-size: cover;
+}
+
+#recipe_img_1{
+    
+    background: url(../../CSS/images/Rectangle24.png);
+}
+
+#recipe_img_2{
+    background: url(../../CSS/images/Rectangle25.png);
+}
+
+.recipe_info{
+    width: 663px;
+}
+
+
+.cooking_time{
+    margin: 10px 0 0 40px;
+}
+
+.calories{
+    margin: 0 0 0 40px;
+}
+
+.dish_name{
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 51px;
+    text-align: center;
+    color: #000000;
+}
+
+.cooking_time{
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    color: #000000;
+
+}
+
+.calories{
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;  
+    color: #000000;
+}
+
+.recipe_button{
+    width: 360px;
+    height: 68px;
+    background: linear-gradient(180deg, rgba(49, 49, 49, 0.38) 0%, rgba(96, 65, 65, 0.1254) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: 'MuseoModerno';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    color: #000000;
+    margin: 60px 0 0 160px;
+}
+
+#canelloni{
+    margin-top: 67px;
+}
+
+#pasta_carbonara{
+    margin-top: 92px;
+}
+

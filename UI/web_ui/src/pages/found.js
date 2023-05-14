@@ -1,27 +1,21 @@
-import React, {useState, useEffect} from 'react';
-import {Link, useParams} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 import api from "../components/Axios";
-import "../CSS/recipes.css";
 
+function Found() {
+    const [recipes, setRecipes] = useState([]);
+    setRecipes(localStorage.getItem("recipes"));
 
-function Recipes() {
-    const [recipes, setRecipes] = useState([{ingredients: []}]);
-
-    useEffect(() => {
-        api.get("recipes").then((response) => {
-            setRecipes(response.data);
-        }).catch((error) => console.error(error))
-    }, []);
     return (
         <div>
         <div>
-            <button className="back-button"><Link to={"/"}>Back</Link></button>
+            <button className="back-button">--Back</button>
         </div>
         <div className="recipe-list">
         {recipes.map((recipe, index) => (
         <form className="recipe-form" key={index}>
           <div className="recipe-image">
-            <img src="" alt="Recipe Image" />
+            <img src={recipe.image} alt="Recipe Image" />
           </div>
           <div className="recipe-details">
             <h2 className="recipe-name">{recipe.name}</h2>
@@ -53,4 +47,4 @@ function Recipes() {
       );
 }
 
-export default Recipes
+export default Found

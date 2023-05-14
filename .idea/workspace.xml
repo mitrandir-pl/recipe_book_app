@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff3d1a25-6e70-4807-b98d-2048e3efcd3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fastapi_app/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastapi_app/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/web_ui/src/CSS/add_recipe.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/web_ui/src/CSS/main_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/databse_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/databse_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/db_script.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/db_script.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/neo4j_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/neo4j_db_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/desktop/desktop_ui_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/desktop/desktop_ui_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exceptions/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/exceptions/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exceptions/db_exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/exceptions/db_exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe_book/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/recipe_book/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe_book/recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/recipe_book/recipe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/web_ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/web_ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/web_ui/src/CSS/recipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/src/CSS/recipe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/web_ui/src/CSS/recipes.css" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/src/CSS/recipes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/web_ui/src/components/AppRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/src/components/AppRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/web_ui/src/pages/recipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/src/pages/recipe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/web_ui/src/pages/recipe_list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/src/pages/recipe_list.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi_app/DB/neo4j_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/neo4j_db_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi_app/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi_app/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi_app/routes/recipes_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/routes/recipes_urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -45,6 +44,11 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -60,18 +64,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/UI/web_ui/src/pages/css" />
+      <recent name="$PROJECT_DIR$/UI/web_ui/src/pages" />
       <recent name="$PROJECT_DIR$/fastapi_app" />
       <recent name="$PROJECT_DIR$/UI/desktop" />
       <recent name="$PROJECT_DIR$/UI" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -83,7 +90,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="$USER_HOME$/.cache/pypoetry/virtualenvs/course-work-hG6EAcZ1-py3.10/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fastapi_app" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -93,7 +100,7 @@
         <option name="region" />
         <option name="useCurrentConnection" value="false" />
       </EXTENSION>
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fastapi_app/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,7 +126,17 @@
       <workItem from="1671014040058" duration="1031000" />
       <workItem from="1671179545043" duration="57000" />
       <workItem from="1671435205597" duration="11032000" />
-      <workItem from="1679738142947" duration="3478000" />
+      <workItem from="1679738142947" duration="3788000" />
+      <workItem from="1679851294842" duration="18467000" />
+      <workItem from="1680077281152" duration="3975000" />
+      <workItem from="1680273881549" duration="13194000" />
+      <workItem from="1680515259131" duration="23496000" />
+      <workItem from="1680800573096" duration="740000" />
+      <workItem from="1682361041624" duration="8821000" />
+      <workItem from="1683291316086" duration="22000" />
+      <workItem from="1683366091255" duration="9617000" />
+      <workItem from="1683561214612" duration="13343000" />
+      <workItem from="1683699482953" duration="26148000" />
     </task>
     <servers />
   </component>
