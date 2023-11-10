@@ -4,6 +4,9 @@ class Product:
         self.name = name
         self.kcal = kcal
 
+    def __str__(self):
+        return self.name
+
 
 class Recipe:
 

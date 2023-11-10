@@ -12,22 +12,22 @@ services:
       - "8000:8000"
     stdin_open: true
     tty: true
-    command: poetry run uvicorn main:app --reload --host 0.0.0.0
+    command: poetry run uvicorn main:app --host 0.0.0.0 --reload
     depends_on:
       - neo4j
 
-  ui:
-    container_name: web_ui
-    build: ./UI/web_ui
-    volumes:
-      - ./UI/web_ui:/UI/web_ui
-    ports:
-      - "3000:3000"
-    environment:
-      DEBUG: 'true'
-    command: npm start
-    depends_on:
-      - fastapi
+#  ui:
+#    container_name: web_ui
+#    build: ./UI/web_ui
+#    volumes:
+#      - ./UI/web_ui:/UI/web_ui
+#    ports:
+#      - "3000:3000"
+#    environment:
+#      DEBUG: 'true'
+#    command: npm start
+#    depends_on:
+#      - fastapi
 
   neo4j:
     restart: always

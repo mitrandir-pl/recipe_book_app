@@ -1,50 +1,48 @@
 from dataclasses import dataclass
 import os
 
-from neo4j import GraphDatabase, Driver
+from neo4j import AsyncGraphDatabase, AsyncDriver
 
 from recipe_book import Recipe, Product
 from exceptions import (
     RecipeDoesNotExistException,
     NoIngredientsEnteredException,
-    NoIngredientsException,
 )
 
 
 class Neo4jDatabaseHandler:
 
-    def __init__(self, driver: Driver):
+    def __init__(self, driver: AsyncDriver):
         self.driver = driver
 
-    def get_recipes_from_data(self, data: dict) -> list[Recipe]:
+    async def get_recipes_from_data(self, data: dict) -> list[Recipe]:
         """Gets data from database and returns list of recipes from it."""
-        if data:
+        if not data:
+            raise RecipeDoesNotExistException()
+        else:
             list_of_recipes = []
             for i in data:
-                recipe_name = i['recipe']['name']
-                recipe_how_to_cook = i['recipe']['how_to_cook']
-                recipe_time = i['recipe']['cooking_time_in_min']
-                ingredients = self.get_ingredients_for_recipe(
-                    recipe_name
-                )
                 list_of_recipes.append(
-                    Recipe(recipe_name, recipe_how_to_cook, recipe_time, ingredients)
+                    Recipe(
+                        i['recipe']['name'],
+                        i['recipe']['how_to_cook'],
+                        i['recipe']['cooking_time_in_min'],
+                        await self.get_ingredients_for_recipe(i['recipe']['name']))
                 )
-        else:
-            raise RecipeDoesNotExistException()
-        return list_of_recipes
+            return list_of_recipes
 
-    def get_recipes(self) -> list[Recipe]:
+    async def get_recipes(self) -> list[Recipe]:
         """Returns a lisr with all recipes."""
-        with self.driver.session() as session:
-            recipe = session.execute_write(self._get_recipes)
+        async with self.driver.session() as session:
+            recipe = await session.execute_write(self._get_recipes)
         return recipe
 
-    def _get_recipes(self, tx) -> list[Recipe]:
+    async def _get_recipes(self, tx) -> list[Recipe]:
         """Finds and returns all recipes."""
         query = "MATCH (recipe:Recipe) RETURN recipe"
-        data = tx.run(query).data()
-        list_of_recipes = self.get_recipes_from_data(data)
+        result = await tx.run(query)
+        data = await result.data()
+        list_of_recipes = await self.get_recipes_from_data(data)
         return list_of_recipes
 
     def get_recipe_by_name(self, recipe_name: str) -> Recipe:
@@ -189,7 +187,7 @@ class Neo4jDatabaseHandler:
                  "(product:Product) RETURN DISTINCT recipe, product"
         return query
 
-    def get_ingredients_for_recipe(self, recipe_name: str) -> list[Product]:
+    async def get_ingredients_for_recipe(self, recipe_name: str) -> list[Product]:
         """Returns list of ingredients for rhe recipe.
 
         Method gets a recipe name and makes a query to the database
@@ -199,26 +197,25 @@ class Neo4jDatabaseHandler:
         :param recipe_name: name of the recipe
         :return: list of ingredients
         """
-        with self.driver.session() as session:
-            recipe = session.execute_write(self._get_ingredients_for_recipe, recipe_name)
+        async with self.driver.session() as session:
+            recipe = await session.execute_write(self._get_ingredients_for_recipe, recipe_name)
         return recipe
 
-    def _get_ingredients_for_recipe(self, tx, recipe_name: str) -> list[Product] | None:
+    async def _get_ingredients_for_recipe(self, tx, recipe_name: str) -> list[Product] | None:
         """Finds and returns ingredients needed for a recipe."""
         query = "MATCH (:Recipe {name: $recipe_name})-[:INGREDIENT]->" \
                 "(ingredients:Product) RETURN ingredients"
-        data = tx.run(query, recipe_name=recipe_name).data()
-        if data:
-            ingredients = []
-            for i in data:
-                ingredient = Product(
-                    i['ingredients']['name'],
-                    i['ingredients']['calories_per_100_grams'],
-                )
-                ingredients.append(ingredient)
-        else:
+        result = await tx.run(query, recipe_name=recipe_name)
+        data = await result.data()
+        if not data:
             return None
-            # raise NoIngredientsException()
+        ingredients = []
+        for i in data:
+            ingredient = Product(
+                i['ingredients']['name'],
+                i['ingredients']['calories_per_100_grams'],
+            )
+            ingredients.append(ingredient)
         return ingredients
 
     def count_calories_in_recipe(self):
@@ -249,20 +246,20 @@ class Neo4jDatabaseHandler:
 
 @dataclass
 class Neo4jSession:
-    driver: Driver = None
+    driver: AsyncDriver = None
 
-    def __enter__(self) -> Neo4jDatabaseHandler:
+    async def __aenter__(self) -> Neo4jDatabaseHandler:
         """Establishes a connection with the database.
 
         :return: None
         """
-        self.driver = GraphDatabase.driver(
+        self.driver = AsyncGraphDatabase.driver(
             os.getenv("NEO4J_URI"),
             auth=(os.getenv("NEO4J_USERNAME"),
                   os.getenv("NEO4J_PASSWORD"))
         )
         return Neo4jDatabaseHandler(self.driver)
 
-    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+    async def __aexit__(self, exc_type, exc_val, exc_tb) -> None:
         """Closes connection with database."""
-        self.driver.close()
+        await self.driver.close()

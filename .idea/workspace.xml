@@ -5,20 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff3d1a25-6e70-4807-b98d-2048e3efcd3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/UI/web_ui/src/CSS/add_recipe.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/web_ui/src/CSS/main_page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fastapi_app/DB/db_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/course_work_5_sem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/course_work_5_sem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/web_ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/web_ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/web_ui/src/CSS/recipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/src/CSS/recipe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/web_ui/src/CSS/recipes.css" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/src/CSS/recipes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/web_ui/src/components/AppRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/src/components/AppRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/web_ui/src/pages/recipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/src/pages/recipe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/web_ui/src/pages/recipe_list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UI/web_ui/src/pages/recipe_list.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi_app/DB/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fastapi_app/DB/neo4j_db_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/neo4j_db_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fastapi_app/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fastapi_app/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi_app/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/DB/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi_app/config/db_settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi_app/config/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/routes/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi_app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastapi_app/recipe_book/recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/recipe_book/recipe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fastapi_app/routes/recipes_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastapi_app/routes/recipes_urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo_2023-03-03_12-50-57.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -53,35 +56,38 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2IUfid7q1A0NAMBqZopybTeCZ90" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/unik/7_sem/recipe_book_app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\unik\7_sem\recipe_book_app\fastapi_app\DB" />
       <recent name="$PROJECT_DIR$/UI/web_ui/src/pages/css" />
       <recent name="$PROJECT_DIR$/UI/web_ui/src/pages" />
       <recent name="$PROJECT_DIR$/fastapi_app" />
       <recent name="$PROJECT_DIR$/UI/desktop" />
-      <recent name="$PROJECT_DIR$/UI" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="FastAPI.course_work">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="course_work_5_sem" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,7 +97,7 @@
       </envs>
       <option name="SDK_HOME" value="$USER_HOME$/.cache/pypoetry/virtualenvs/course-work-hG6EAcZ1-py3.10/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fastapi_app" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -109,6 +115,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="course_work" type="Python.FastAPI">
+      <option name="file" value="D:\unik\7_sem\recipe_book_app\fastapi_app\main.py" />
+      <module name="course_work_5_sem" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
+      <option name="SDK_NAME" value="Remote Python 3.10.13 Docker Compose (fastapi)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="FastAPI.course_work" />
+      <item itemvalue="Python.main" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -137,11 +162,21 @@
       <workItem from="1683366091255" duration="9617000" />
       <workItem from="1683561214612" duration="13343000" />
       <workItem from="1683699482953" duration="26148000" />
+      <workItem from="1696864923994" duration="16000" />
+      <workItem from="1696864990828" duration="5263000" />
+      <workItem from="1697042313371" duration="36000" />
+      <workItem from="1697175229341" duration="10309000" />
+      <workItem from="1699590261461" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="javascript:npm:react" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/course_work_5_sem$main.coverage" NAME="main Coverage Results" MODIFIED="1671454686461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

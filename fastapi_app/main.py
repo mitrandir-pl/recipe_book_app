@@ -4,7 +4,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
-from DB import DatabaseHandler, Neo4jDatabaseHandler, Neo4jSession
+from DB.neo4j_db_handler import Neo4jDatabaseHandler
+from DB.databse_handler import DatabaseHandler
 from routes import recipes_urls
 
 app = FastAPI()
@@ -62,12 +63,4 @@ load_dotenv()
 
 @app.get("/")
 def read_root():
-    with Neo4jSession() as session:
-        session.get_recipes_by_country_category_and_time(
-        'Italy', 'Second course', 65
-    )
-    # print(len(main()))
-    # for i in main():
-    #     print(i)
-    # breakpoint()
     return {"id": 1}
